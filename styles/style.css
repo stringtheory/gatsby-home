@@ -54,51 +54,41 @@ a:hover {
 
 /* Layout
  ========================================================================== */
-
-/** source order (mobile-first)
-  * 1. header
-  * 2. aside
-  * 3. article
-  */
-
-.you_cant_resistor,
-.all_that_really_matters {
+.l_main {
   background: #fff;
-}
-
-.all_that_really_matters {
   padding: 1em 2em;
 }
 
-.you_cant_resistor {
+.l_hero {
+  background: #fff;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
 }
 
-.last_and_least {
+.l_foot {
   background: #000;
 }
 
 @media all and (min-width: 768px) {
-  .all_the_things {
+  .l_page {
     display: grid;
     grid-template-columns: .15fr .75fr 1fr;
     grid-template-rows: .5fr 1fr 1fr 2em;
     min-height: 100vh;
   }
 
-  .all_that_really_matters {
+  .l_main {
     grid-column: 2 / 3;
     grid-row: 1 / 3;
   }
 
-  .you_cant_resistor {
+  .l_hero {
     grid-column: 3 / 5;
     grid-row: 2 / 5;
   }
 
-  .last_and_least {
+  .l_foot {
     background: #fff;
     color: #b2b2b2;
     grid-column: 1 / 3;
@@ -106,8 +96,8 @@ a:hover {
   }
 
   /* Inner Layout */
-  .all_that_really_matters,
-  .last_and_laest {
+  .l_main,
+  .l_foot {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,7 +130,7 @@ a:hover {
   white-space: nowrap;
 }
 
-.really_good_stuff {
+.m_hlist {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -148,23 +138,23 @@ a:hover {
   padding: 0;
 }
 
-.really_good_stuff li {
+.m_hlist li {
   margin: 0 .25em 0 0;
   padding: 0;
 }
 
-.really_good_stuff li:last-child {
+.m_hlist li:last-child {
   width: 100%;
 }
 
-.last_and_least small {
+.l_foot small {
   color: #666;
   font-size: 13px;
   display: block;
   margin: .5em 1em;
 }
 
-.last_and_least a {
+.l_foot a {
   color: #666;
 }
 
@@ -173,8 +163,8 @@ a:hover {
   body {font-size: 18px;}
   h1 {font-size: 6vw;}
 
-  .last_and_least small,
-  .last_and_least a {
+  .l_foot small,
+  .l_foot a {
     color: #b4b4b4;
   }
 }
@@ -185,23 +175,18 @@ a:hover {
 
 /* Icons & List
  ========================================================================== */
-.blip {
+.a_icon {
   height: 30px;
   margin: 1em 1.5em 0.5em 0;
   width: 30px;
 }
 
-.st0 {
-  fill-rule: evenodd;
-  clip-rule: evenodd;
-}
-
-.solid_path {
+.a_icon path {
   fill: #9FA4AF;
   transition: fill 1s ease-out;
 }
 
-a:hover .solid_path {
+a.a_icon:hover path {
   fill: #000;
 }
 
