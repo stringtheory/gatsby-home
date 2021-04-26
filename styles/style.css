@@ -2,17 +2,35 @@
  ========================================================================== */
 /* Reset & Defaults
  ========================================================================== */
- :root {
-    --c-bg: #fff;
-    --c-loud: #000;
-    --c-quiet: #737396; /* 4.54:1 on white | 4.62:1 on black */
+:root {
+  --c-bg: #fff;
+  --c-loud: #000;
+  --c-quiet: #737396; /* 4.54:1 on white | 4.62:1 on black */
+  --c-hover: var(--c-loud);
+  --c-page-bg: var(--c-loud);
+  --c-foot-bg: var(--c-loud);
+  --c-headline: var(--c-loud);
+  --c-inverse-hover: #ccc;
+  --c-highlight: #c8ff00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #0b0b13;
+    --c-loud: #ddd;
+    --c-quiet-lt: #9898CE;
+    --c-quiet: #9999a9;
     --c-hover: var(--c-loud);
-    --c-page-bg: var(--c-loud);
-    --c-foot-bg: var(--c-loud);
+    --c-page-bg: var(--c-bg);
+    --c-foot-bg: var(--c-bg);
     --c-headline: var(--c-loud);
     --c-inverse-hover: #ccc;
-    --c-highlight: #c8ff00;
- }
+    --c-highlight: #ff4be0;
+  }
+  body {
+    -webkit-font-smoothing: antialiased;
+  }
+}
 
 @font-face {
     font-family: 'Noto Sans Ugaritic';

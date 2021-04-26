@@ -9,6 +9,9 @@
   <meta name="description" content="Diane Wellman is a Senior Front End Engineer & Fine Artist based out of San Francisco.">
   <meta name="author" content="Diane Wellman">
 
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#9898CE">
+
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
@@ -83,19 +86,37 @@
     <a href="https://www.instagram.com/atomicstring/">
       <span class="sr_only">Diane Wellman on Instagram</span>
       <picture>
+        <!-- Dark | WEBP -->
+        <source srcset="images/sprungbot_friends_dk_420w.webp 420w,
+                        images/sprungbot_friends_dk_540w.webp 540w,
+                        images/sprungbot_friends_dk_840w.webp 840w,
+                        images/sprungbot_friends_dk_1080w.webp 1080w"
+                media="(prefers-color-scheme: dark)"
+                sizes="(max-width: 420px) 100vw, (max-width: 776px) 50vw, 38vw"
+                type="image/webp" />
+        <!-- Dark | JPG -->
+        <source srcset="images/sprungbot_friends_dk_420w.jpg 420w,
+                        images/sprungbot_friends_dk_540w.jpg 540w,
+                        images/sprungbot_friends_dk_840w.jpg 840w,
+                        images/sprungbot_friends_dk_1080w.jpg 1080w"
+                sizes="(max-width: 420px) 100vw, (max-width: 776px) 50vw, 38vw"
+                type="image/jpg" />
+        <!-- Light or Default | JPG -->
         <source srcset="images/sprungbot_friends_420w.webp 420w,
                         images/sprungbot_friends_540w.webp 540w,
                         images/sprungbot_friends_840w.webp 840w,
                         images/sprungbot_friends_1080w.webp 1080w"
                 sizes="(max-width: 420px) 100vw, (max-width: 776px) 50vw, 38vw"
                 type="image/webp" />
+        <!-- Light or Default | WEBP -->
         <source srcset="images/sprungbot_friends_420w.jpg 420w,
                         images/sprungbot_friends_540w.jpg 540w,
                         images/sprungbot_friends_840w.jpg 840w,
                         images/sprungbot_friends_1080w.jpg 1080w"
                 sizes="(max-width: 420px) 100vw, (max-width: 776px) 50vw, 38vw"
                 type="image/jpg" />
-        <img src="images/sprungbot_friends_540w.jpg 540w"
+        <!-- Fallback | WEBP -->
+        <img src="images/sprungbot_friends_540w.jpg"
              alt="Hello World. We are here for the robot takeover." />
       </picture>
     </a>
