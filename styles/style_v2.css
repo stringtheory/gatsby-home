@@ -14,7 +14,7 @@
   --c-highlight: #c8ff00;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark)   {
   :root {
     --c-bg: #0b0b13;
     --c-loud: #ddd;

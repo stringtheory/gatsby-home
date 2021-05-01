@@ -5,7 +5,6 @@
 <head>
   <meta charset="utf-8">
   <title>Diane Wellman | Contact</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Diane Wellman is a Senior Front End Engineer & Fine Artist based out of San Francisco.">
   <meta name="author" content="Diane Wellman">
 
@@ -15,11 +14,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="manifest.json">
   <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="images/favicon.ico">
 
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style_v2.css">
 </head>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -127,11 +126,14 @@
     <small>© Diane Wellman
       <a href="http://longnow.org/02018" target=”_blank”
          title="Lean More about this weird looking date at the Long Now Foundation">
-        0<script type="text/JavaScript">document.write(new Date().getFullYear());</script>
+        0<span id="js-current-year">2020</span>
+        <script>document.querySelector('#js-current-year').innerText = new Date().getFullYear();</script>
       </a>
       &nbsp;&nbsp;&nbsp;&nbsp;<span class="kosmik">𐎐𐎊𐎋𐎟𐎖𐎁𐎋𐎁𐎊</span>
     </small>
   </footer>
+
+
 
 </body>
 
