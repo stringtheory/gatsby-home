@@ -9,10 +9,10 @@
   <meta name="author" content="Gatsby Labs">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-  <link rel="shortcut icon" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="gatsby/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="gatsby/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="gatsby/favicon-16x16.png">
+  <link rel="shortcut icon" href="gatsby/favicon-16x16.png">
 
   <link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -44,114 +44,96 @@
     </nav>
   </header>
 
-  <main>
-    <section class="panelGrid panelGrid_1">
-      <div class="panelGrid_content flexContent">
-        <h1 class="headlineHero">You’ll never throw events the old way&nbsp;again.</h1>
-        <p class="copyHero">When your team has Gatsby, nothing slips through the cracks.</p>
-        <form aria-labelledby="home_demo_header" class="inlineForm">
-          <span id="home_demo_header" class="sr_only">Schedule a demonstration</span>
-          <div class="textField">
-           <label class="sr_only" for="home_demo_input_header">Enter your email address.</label>
-           <input id="home_demo_input_header"  aria-labelledby="home_demo_input_header"
-                  class="textField_input" type="email"  name="email" placeholder="email" required />
-           <div class="textField_msg">
+  <main style="padding: 2rem">
+    <section>
+      <h2>Form</h2>
+      <p class=""><strong>Default State</strong></p>
+
+       <form class="inlineForm" style="margin: 2rem 0">
+         <div class="textField">
+           <input class="textField_input" type="email" name="email" placeholder="email" required />
+             <div class="textField_msg">
               <svg class="error_icon" aria-hidden="true" viewBox="0 0 20 20">
                 <path d="M10,1.5L0,18.5h20L10,1.5z M8.8,7.1h2.3v2.3l-0.7,4.1H9.5L8.8,9.3V7.1z M8.7,17v-2.2h2.4V17H8.7z"/>
-              </svg>
-             <span>Please enter a valid email address.</span>
+              </svg><span>Please enter a valid email address.</span>
            </div>
-          </div>
-          <button class="btnPrimary btnPrimary_arrow">
+         </div>
+         <button class="btnPrimary btnPrimary_arrow">
            <span class="btnPrimary_copy">Schedule a demo</span>
            <svg class="btnPrimary_icon" aria-hidden="true" viewBox="0 0 24 24">
               <path d="M14.6,21.4c-0.6-0.6-1.3-1.3-1.9-2c1.8-1.8,3.7-3.7,5.5-5.6c0-0.1-0.1-0.1-0.1-0.2c-6,0-12,0-18.1,0c0-1.1,0-2.1,0-3.2
-          c6,0,12.1,0,18.1,0c-1.9-2-3.8-3.9-5.7-5.7c0.8-0.8,1.5-1.5,2.1-2.2c3.2,3.2,6.3,6.4,9.4,9.5C21,15.1,17.8,18.3,14.6,21.4z"/>
+  c6,0,12.1,0,18.1,0c-1.9-2-3.8-3.9-5.7-5.7c0.8-0.8,1.5-1.5,2.1-2.2c3.2,3.2,6.3,6.4,9.4,9.5C21,15.1,17.8,18.3,14.6,21.4z"/>
            </svg>
-          </button>
-        </form>
-      </div>
+         </button>
+      </form>
 
-      <div class="panelGrid_media">
-        <video autoplay="" loop="" playsinline="" preload="auto" muted="">
-          <source src="https://gatsby-website-assets.s3-us-west-2.amazonaws.com/demo.mp4"
-                  type="video/mp4">
-        </video>
-      </div>
+      <p class=""><strong>Text Field Error</strong></p>
+      <form class="inlineForm is_pending" style="margin: 2rem 0">
+         <div class="textField has_error">
+           <input class="textField_input" type="email" name="email" placeholder="email" required />
+           <div class="textField_msg">
+              <svg class="error_icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10,1.5L0,18.5h20L10,1.5z M8.8,7.1h2.3v2.3l-0.7,4.1H9.5L8.8,9.3V7.1z M8.7,17v-2.2h2.4V17H8.7z"/>
+              </svg><span>Please enter a valid email address.</span>
+           </div>
+         </div>
+         <button class="btnPrimary btnPrimary_arrow">
+           <span class="btnPrimary_copy">Schedule a demo</span>
+           <svg class="btnPrimary_icon" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M14.6,21.4c-0.6-0.6-1.3-1.3-1.9-2c1.8-1.8,3.7-3.7,5.5-5.6c0-0.1-0.1-0.1-0.1-0.2c-6,0-12,0-18.1,0c0-1.1,0-2.1,0-3.2
+  c6,0,12.1,0,18.1,0c-1.9-2-3.8-3.9-5.7-5.7c0.8-0.8,1.5-1.5,2.1-2.2c3.2,3.2,6.3,6.4,9.4,9.5C21,15.1,17.8,18.3,14.6,21.4z"/>
+           </svg>
+         </button>
+      </form>
+
+      <p class=""><strong>Form Submitting</strong></p>
+      <form class="inlineForm is_loading" style="margin: 2rem 0">
+         <div class="textField">
+           <input class="textField_input" type="email" name="email" value="me@me.com" disabled />
+             <div class="textField_msg">
+              <svg class="error_icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10,1.5L0,18.5h20L10,1.5z M8.8,7.1h2.3v2.3l-0.7,4.1H9.5L8.8,9.3V7.1z M8.7,17v-2.2h2.4V17H8.7z"/>
+              </svg><span>Please enter a valid email address.</span>
+           </div>
+         </div>
+         <button class="btnPrimary" disabled>
+           <div class="spinner btnPrimary_arrow">
+              <div class="spinner_line"></div>
+              <div class="spinner_line"></div>
+              <div class="spinner_line"></div>
+           </div>
+         </button>
+      </form>
+
+      <p class=""><strong>Form Submit Success - allow for entering a new address</strong></p>
+      <form class="inlineForm is_confirmed" style="margin: 2rem 0">
+         <div class="textField">
+           <input class="textField_input" type="email" name="email" placeholder="email" required />
+             <div class="textField_msg">
+              <svg class="error_icon" aria-hidden="true" viewBox="0 0 20 20">
+                <path d="M10,1.5L0,18.5h20L10,1.5z M8.8,7.1h2.3v2.3l-0.7,4.1H9.5L8.8,9.3V7.1z M8.7,17v-2.2h2.4V17H8.7z"/>
+              </svg><span>Please enter a valid email address.</span>
+           </div>
+         </div>
+         <button class="btnPrimary btnPrimary_arrow">
+           <svg class="btnPrimary_icon" aria-hidden="true" viewBox="0 0 24 24">
+             <path d="M55.6,18.8c-0.6-0.6-1.3-1.3-1.9-2c1.8-1.8,3.7-3.7,5.5-5.6c0-0.1-0.1-0.1-0.1-0.2c-6,0-12,0-18.1,0c0-1.1,0-2.1,0-3.2 c6,0, 12.1,0,18.1,0c-1.9-2-3.8-3.9-5.7-5.7C54.3,1.4,55,0.7,55.6,0c3.2,3.2,6.3,6.4,9.4,9.5C62,12.5,58.8,15.7,55.6,18.8z"/>
+             <polygon points="7.4,22 0.1,14.7 2.3,12.5 7.4,17.6 21.8,3.1 24,5.3 "/>
+           </svg>
+         </button>
+      </form>
     </section>
 
-    <section class="panelGrid panelGrid_2">
-      <div class="panelGrid_content">
-        <h2 class="headlineHero">Your single source of truth, from planning through&nbsp;execution.</h2>
-        <p class="copyHero">When your team has Gatsby, nothing slips through the cracks.</p>
-      </div>
-      <figure class="panelGrid_media">
-        <img srcset="images/panel2@2x.jpg 1648w, images/panel2.jpg 824w"
-             src="images/panel2.jpg"
-             alt="Gatsby Interface">
-      </figure>
-    </section>
-
-    <section class="panelGrid panelGrid_3">
-      <div class="panelGrid_content">
-        <h2>Collaborate at every step.</h2>
-        <p>Make sure the right people are on the list — suggest, review, and discuss guests with your entire team. Iterate on copy and design invitations together.</p>
-      </div>
-      <figure class="panelGrid_media">
-        <img srcset="images/panel3@2x.jpg 1506w, images/panel3.jpg 753w"
-             src="images/panel3.jpg"
-             alt="Gatsby Interface">
-      </figure>
-    </section>
-
-    <section class="panelGrid panelGrid_4">
-      <div class="panelGrid_content">
-        <h2>Intimacy, at scale.</h2>
-        <p>Focus on the people, not the process. With mail-merge invitations, guest check-in notifications, and instant Context, Gatsby makes it easy to treat all of your guests like VIPs.</p>
-      </div>
-      <figure class="panelGrid_media">
-        <img srcset="images/panel4@2x.jpg 1420w, images/panel4.jpg 710w"
-             src="images/panel4.jpg"
-             alt="Gatsby Interface">
-      </figure>
-    </section>
-
-    <section class="panelGrid panelGrid_5">
-      <div class="panelGrid_content">
-        <h2 class="center">and so much more</h2>
-      </div>
-      <figure class="panelGrid_media panelGrid_mediaFull">
-        <img srcset="images/panel5@2x.jpg 2812w, images/panel5.jpg 1406w"
-             src="images/panel5.jpg"
-             alt="Gatsby Interface">
-      </figure>
+    <section style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #ccc">
+      <h2>Color Style Token Reference</h2>
+      <p class="codepen" data-height="845" data-theme-id="2681" data-default-tab="result" data-user="stringtheory" data-slug-hash="GRWrMxL" style="height: 545px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Palette with Accessibility Data">
+        <span>See the Pen <a href="https://codepen.io/stringtheory/pen/GRWrMxL">
+        Color Palette with Accessibility Data</a> by Diane Wellman (<a href="https://codepen.io/stringtheory">@stringtheory</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     </section>
   </main>
-
-  <div class="footerCta">
-    <h2 class="center headlineHero">You’ll never throw events the old way&nbsp;again.</h2>
-    <form aria-labelledby="home_demo_footer" class="inlineForm">
-      <span id="home_demo_footer" class="sr_only">Schedule a demonstration</span>
-      <div class="textField">
-       <label class="sr_only" for="home_demo_input_footer">Enter your email address.</label>
-       <input id="home_demo_input_footer"  aria-labelledby="home_demo_input_header"
-              class="textField_input" type="email"  name="email" placeholder="email" required />
-       <div class="textField_msg">
-          <svg class="error_icon" aria-hidden="true" viewBox="0 0 20 20">
-            <path d="M10,1.5L0,18.5h20L10,1.5z M8.8,7.1h2.3v2.3l-0.7,4.1H9.5L8.8,9.3V7.1z M8.7,17v-2.2h2.4V17H8.7z"/>
-          </svg>
-         <span>Please enter a valid email address.</span>
-       </div>
-      </div>
-      <button class="btnPrimary btnPrimary_arrow">
-       <span class="btnPrimary_copy">Schedule a demo</span>
-       <svg class="btnPrimary_icon" aria-hidden="true" viewBox="0 0 24 24">
-          <path d="M14.6,21.4c-0.6-0.6-1.3-1.3-1.9-2c1.8-1.8,3.7-3.7,5.5-5.6c0-0.1-0.1-0.1-0.1-0.2c-6,0-12,0-18.1,0c0-1.1,0-2.1,0-3.2
-      c6,0,12.1,0,18.1,0c-1.9-2-3.8-3.9-5.7-5.7c0.8-0.8,1.5-1.5,2.1-2.2c3.2,3.2,6.3,6.4,9.4,9.5C21,15.1,17.8,18.3,14.6,21.4z"/>
-       </svg>
-      </button>
-    </form>
-  </div>
 
   <footer class="pageFooter">
     <p class="pageFooter_msg">Gatsby Labs, Inc. © <span id="js-current-year">2020</span>
